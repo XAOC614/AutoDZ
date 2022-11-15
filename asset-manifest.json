@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/AutoDZ/static/css/main.f28a23c4.css",
+    "main.js": "/AutoDZ/static/js/main.7b606574.js",
+    "static/js/787.66cb4309.chunk.js": "/AutoDZ/static/js/787.66cb4309.chunk.js",
+    "static/media/avatar.png": "/AutoDZ/static/media/avatar.d947cb9d0d13765666b6.png",
+    "index.html": "/AutoDZ/index.html",
+    "main.f28a23c4.css.map": "/AutoDZ/static/css/main.f28a23c4.css.map",
+    "main.7b606574.js.map": "/AutoDZ/static/js/main.7b606574.js.map",
+    "787.66cb4309.chunk.js.map": "/AutoDZ/static/js/787.66cb4309.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f28a23c4.css",
+    "static/js/main.7b606574.js"
+  ]
+}
