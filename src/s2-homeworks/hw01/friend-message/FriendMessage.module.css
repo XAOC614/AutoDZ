@@ -1,0 +1,36 @@
+.friendMessage {
+    margin-left: 250px;
+
+}
+
+.friendImageAndText {
+border-radius: 15px;
+}
+
+.friendImageAndText img {
+    width: 75px;
+    border-radius: 30px ;
+}
+
+.friendText {
+    border-radius: 10px;
+
+}
+
+.friendText:after {
+background-color: #cc9c00;
+}
+
+.friendName {
+    color: red;
+
+}
+
+.friendMessageText {
+
+
+}
+
+.friendTime {
+color: blueviolet;
+}
