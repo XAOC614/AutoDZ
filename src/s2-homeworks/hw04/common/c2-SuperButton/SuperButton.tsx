@@ -5,25 +5,29 @@ import s from './SuperButton.module.css'
 type DefaultButtonPropsType = DetailedHTMLProps<ButtonHTMLAttributes<HTMLButtonElement>,
     HTMLButtonElement>
 
+type ButtonType = 'red' | 'secondary'
+
 type SuperButtonPropsType = DefaultButtonPropsType & {
-    xType?: string
+    xType?: ButtonType
 }
 
 const SuperButton: React.FC<SuperButtonPropsType> = (
     {
-        xType,
+        xType = 'secondary',
         className,
         disabled,
         ...restProps // все остальные пропсы попадут в объект restProps, там же будет children
     }
 ) => {
-    const finalClassName = s.button
-        // + (disabled
-        //         ? ...
-        //         : xType === 'red'
-        //             ? ...
-        + (className ? ' ' + className : '') // задачка на смешивание классов
 
+    const finalClassName = `${s.button} ${s[xType]} ${disabled ?? s.disabled}`
+    // const finalClassName = s.button
+    //     + (disabled
+    //             ? s.secondary
+    //             : xType === 'red'
+    //                 ? s.red : s.button)
+    //     + (className ? ' ' + className : '') // задачка на смешивание классов
+    // const finalClassName = `${xType ? s.red : s.default} ${className}`
     return (
         <button
             disabled={disabled}

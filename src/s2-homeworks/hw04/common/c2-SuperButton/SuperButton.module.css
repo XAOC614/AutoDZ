@@ -5,12 +5,14 @@
 }
 
 .secondary {
+    background: blue;
 }
 
 .default {
 }
 
 .red {
+    background: red;
 }
 
 .default:hover {
