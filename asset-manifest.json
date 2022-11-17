@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/AutoDZ/static/css/main.97184bc3.css",
-    "main.js": "/AutoDZ/static/js/main.00e8519b.js",
+    "main.js": "/AutoDZ/static/js/main.c925ad4e.js",
     "static/js/787.66cb4309.chunk.js": "/AutoDZ/static/js/787.66cb4309.chunk.js",
     "static/media/checked.svg": "/AutoDZ/static/media/checked.0b6a1bcf5d417ff0a947.svg",
     "index.html": "/AutoDZ/index.html",
     "main.97184bc3.css.map": "/AutoDZ/static/css/main.97184bc3.css.map",
-    "main.00e8519b.js.map": "/AutoDZ/static/js/main.00e8519b.js.map",
+    "main.c925ad4e.js.map": "/AutoDZ/static/js/main.c925ad4e.js.map",
     "787.66cb4309.chunk.js.map": "/AutoDZ/static/js/787.66cb4309.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.97184bc3.css",
-    "static/js/main.00e8519b.js"
+    "static/js/main.c925ad4e.js"
   ]
 }
