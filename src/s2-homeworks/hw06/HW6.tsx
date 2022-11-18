@@ -18,6 +18,8 @@ const HW6 = () => {
         saveState<string>('hw6-editable-span-value', value)
     }
     const restore = () => {
+        let rest = restoreState<string>('hw6-editable-span-value','')
+        setValue(rest)
         // делают студенты
 
     }
