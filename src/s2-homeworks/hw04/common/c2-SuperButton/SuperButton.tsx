@@ -5,7 +5,7 @@ import s from './SuperButton.module.css'
 type DefaultButtonPropsType = DetailedHTMLProps<ButtonHTMLAttributes<HTMLButtonElement>,
     HTMLButtonElement>
 
-type ButtonType = 'red' | 'secondary' | 'disabled' | 'default'
+type ButtonType = 'red' | 'secondary'
 
 type SuperButtonPropsType = DefaultButtonPropsType & {
     xType?: ButtonType

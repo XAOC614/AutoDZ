@@ -2,6 +2,12 @@
 }
 
 .header {
+    display: flex;
+
+    width: 200px;
+
+    transition-duration: 500ms;
+    transform: translate(0px);
 }
 
 .header h1 {

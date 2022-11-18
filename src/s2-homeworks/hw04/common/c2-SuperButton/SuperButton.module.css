@@ -2,6 +2,7 @@
 }
 
 .disabled {
+    background: yellow;
 }
 
 .secondary {
@@ -9,7 +10,7 @@
 }
 
 .default {
-    background: white;
+    background: green;
 }
 
 .red {
