@@ -2,7 +2,7 @@ import React, {useState} from 'react'
 import SuperButton from '../hw04/common/c2-SuperButton/SuperButton'
 import {restoreState} from '../hw06/localStorage/localStorage'
 import s from './Clock.module.css'
-import {clearInterval} from "timers";
+
 
 function Clock() {
     const [timerId, setTimerId] = useState<number | undefined>(undefined)
@@ -14,15 +14,16 @@ function Clock() {
         // пишут студенты // запустить часы (должно отображаться реальное время, а не +1)
         // сохранить ид таймера (https://learn.javascript.ru/settimeout-setinterval#setinterval)
         stop()
-        const id:number = +setInterval(()=>{
+        const id: number = +setInterval(() => {
             setDate(new Date())
-        } ,1000)
+        }, 1000)
         setTimerId(id)
     }
 
     const stop = () => {
         // пишут студенты // поставить часы на паузу, обнулить ид таймера (timerId <- undefined)
         clearInterval(timerId)
+        setTimerId(undefined)
     }
 
     const onMouseEnter = () => { // пишут студенты // показать дату если наведена мышка
@@ -32,12 +33,14 @@ function Clock() {
         setShow(false)
     }
 
-    const stringTime = date?.toLocaleTimeString()|| <br/> // часы24:минуты:секунды (01:02:03)/(23:02:03)/(24:00:00)/(00:00:01) // пишут студенты
+    const stringTime = date?.toLocaleTimeString() || <br/> // часы24:минуты:секунды (01:02:03)/(23:02:03)/(24:00:00)/(00:00:01) // пишут студенты
     const stringDate = date?.toLocaleDateString() || <br/> // день.месяц.год (01.02.2022) // пишут студенты, варианты 01.02.0123/01.02.-123/01.02.12345 не рассматриваем
 
     // день недели на английском, месяц на английском (https://learn.javascript.ru/intl#intl-datetimeformat)
-    const stringDay = date?.toLocaleString() || <br/> // пишут студенты
-    const stringMonth = date?.toLocaleString() || <br/> // пишут студенты
+    const options = {weekday: 'long', year: 'numeric', month: 'long', day: 'numeric'};
+
+    const stringDay = new Intl.DateTimeFormat('en-US', {day: 'numeric'}).format(date) || <br/> // пишут студенты
+    const stringMonth = new Intl.DateTimeFormat('en-US', {month: 'long'}).format(date) || <br/> // пишут студенты
 
     return (
         <div className={s.clock}>
@@ -71,14 +74,14 @@ function Clock() {
             <div className={s.buttonsContainer}>
                 <SuperButton
                     id={'hw9-button-start'}
-                    disabled={true} // пишут студенты // задизэйблить если таймер запущен
+                    disabled={!!timerId} // пишут студенты // задизэйблить если таймер запущен
                     onClick={start}
                 >
                     start
                 </SuperButton>
                 <SuperButton
                     id={'hw9-button-stop'}
-                    disabled={true} // пишут студенты // задизэйблить если таймер не запущен
+                    disabled={timerId === undefined} // пишут студенты // задизэйблить если таймер не запущен
                     onClick={stop}
                 >
                     stop

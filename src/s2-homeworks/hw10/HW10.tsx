@@ -34,6 +34,7 @@ const HW10 = () => {
                     </div>
                 ) : (
                     <SuperButton
+                        xType='secondary'
                         id={'hw10-button-start-loading'}
                         onClick={setLoading}
                     >
