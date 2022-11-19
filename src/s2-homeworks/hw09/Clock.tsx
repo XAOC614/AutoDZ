@@ -15,6 +15,7 @@ function Clock() {
         // сохранить ид таймера (https://learn.javascript.ru/settimeout-setinterval#setinterval)
         stop()
         const id: number = +setInterval(() => {
+            console.log('tik')
             setDate(new Date())
         }, 1000)
         setTimerId(id)
@@ -33,7 +34,7 @@ function Clock() {
         setShow(false)
     }
 
-    const stringTime = date?.toLocaleTimeString('ru-Ru',{hour:'2-digit',minute:'2-digit'}) || <br/> // часы24:минуты:секунды (01:02:03)/(23:02:03)/(24:00:00)/(00:00:01) // пишут студенты
+    const stringTime = date?.toLocaleTimeString('ru-Ru',) || <br/> // часы24:минуты:секунды (01:02:03)/(23:02:03)/(24:00:00)/(00:00:01) // пишут студенты
     const stringDate = date?.toLocaleDateString('ru-Ru') || <br/> // день.месяц.год (01.02.2022) // пишут студенты, варианты 01.02.0123/01.02.-123/01.02.12345 не рассматриваем
 
     // день недели на английском, месяц на английском (https://learn.javascript.ru/intl#intl-datetimeformat)
