@@ -33,13 +33,13 @@ function Clock() {
         setShow(false)
     }
 
-    const stringTime = date?.toLocaleTimeString() || <br/> // часы24:минуты:секунды (01:02:03)/(23:02:03)/(24:00:00)/(00:00:01) // пишут студенты
+    const stringTime = date?.toLocaleTimeString([],{hour:'2-digit',minute:'2-digit'}) || <br/> // часы24:минуты:секунды (01:02:03)/(23:02:03)/(24:00:00)/(00:00:01) // пишут студенты
     const stringDate = date?.toLocaleDateString() || <br/> // день.месяц.год (01.02.2022) // пишут студенты, варианты 01.02.0123/01.02.-123/01.02.12345 не рассматриваем
 
     // день недели на английском, месяц на английском (https://learn.javascript.ru/intl#intl-datetimeformat)
     const options = {weekday: 'long', year: 'numeric', month: 'long', day: 'numeric'};
 
-    const stringDay = new Intl.DateTimeFormat('en-US', {day: 'numeric'}).format(date) || <br/> // пишут студенты
+    const stringDay = new Intl.DateTimeFormat('en-US', {weekday: 'long'}).format(date) || <br/> // пишут студенты
     const stringMonth = new Intl.DateTimeFormat('en-US', {month: 'long'}).format(date) || <br/> // пишут студенты
 
     return (
